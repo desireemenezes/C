@@ -1,0 +1,37 @@
+/*IMPORTA FONTES EXTERNAS*/
+@import url(http://fonts.googleapis.com/css?family=Open+Sans|Montserrat);
+
+
+*{
+font-family: 'Open Sans', sans-serif !important;
+color: hsla(198, 65%, 75%, 1);
+}
+
+/*background fundo*/
+
+body{
+  background-image: url('img/index.jpg');
+}
+
+nav{
+  border: 1px solid red;
+}
+
+h1{
+  color:hsla(198, 65%, 75%, 1);
+}
+
+hr {
+ margin-top: 20px;
+ margin-bottom: 20px;
+ border: 0;
+}
+
+nav.navbar-tranparente {
+  padding: 0px 0px;
+  background: rgb(0, 0, 0, 0.6);
+}
+
+.navbar-inverse{
+  border color: 0px;
+}

@@ -5,103 +5,15 @@
 
 
 		<title>Calculadora</title>
-		 <link rel="icon" href="calculator.png">
+		 <link rel="icon" href="img/calculator.png">
 
 		<!-- bootstrap - link cdn -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
 		integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+		<link rel="stylesheet" type="text/css" href="style.css">
 
-		<style type="text/css">
+		<script type="text/javascript" src="main.js"></script>
 
-		/*IMPORTA FONTES EXTERNAS*/
-		@import url(http://fonts.googleapis.com/css?family=Open+Sans|Montserrat);
-
-
-		*{
-    font-family: 'Open Sans', sans-serif !important;
-    color: hsla(198, 65%, 75%, 1);
-		}
-
-		/*background fundo*/
-
-		body{
-			background-image: url('index.jpg');
-		}
-
-		nav{
-			border: 1px solid red;
-		}
-
-		h1{
-			color:hsla(198, 65%, 75%, 1);
-		}
-
-		hr {
-     margin-top: 20px;
-     margin-bottom: 20px;
-     border: 0;
-    }
-
-		nav.navbar-tranparente {
-			padding: 0px 0px;
-			background: rgb(0, 0, 0, 0.6);
-		}
-
-		.navbar-inverse{
-			border color: 0px;
-		}
-
-
-   </style>
-
-		<script type="text/javascript">
-
-			function calcular(){
-				var operacao = document.getElementById('operacao').value;
-				var num1 = document.getElementById('num1').value;
-				var num2 = document.getElementById('num2').value;
-
-			  num1 = parseFloat(num1);
-				num2 = parseFloat(num2);
-
-				if(num1 == '' || num1 == null){
-					alert('favor digitar um número válido');
-					return false;
-				}
-
-				if(num2 == '' || num2 == null){
-					alert('favor digitar um número válido');
-					return false;
-				}
-
-				var resultado = null;
-
-				switch (operacao) {
-					case '1':
-					  resultado = num1 - num2;
-						break;
-
-					case '2':
-						resultado = num1 + num2;
-						break;
-
-					case '3':
-						resultado = num1 * num2;
-						break;
-
-					case '4':
-						resultado = num1 / num2;
-						break;
-
-					default: alert('Escolha uma opção');
-					return false;
-
-				}
-
-				document.getElementById('resultado').value = resultado;
-			}
-
-		</script>
 	</head>
 
 	<body>
@@ -122,7 +34,7 @@
 					</div>
 
 					<div class="col-md-3">
-						<select id="operacao" class="form-control">
+						<select id="operation" class="form-control">
 							<option value="">--Selecione uma operação</option>
 							<option value="1">Subtração</option>
 							<option value="2">Adição</option>
@@ -140,7 +52,7 @@
 
 				<div class="row">
 					<div class="col-md-4">
-						<button type="button" class="btn btn-primary btn-large" onclick="calcular()">Calcular</button>
+						<button type="button" class="btn btn-primary btn-large" onclick="calc()">Calcular</button>
 					</div>
 				</div>
 
@@ -148,7 +60,7 @@
 
 				<div class="col-md-2">
 					<div class="row">
-						<b>Resultado:</b> <input id="resultado" type="text" class="form-control" readonly/>
+						<b>Resultado:</b> <input id="result" type="text" class="form-control" readonly/>
 					</div>
 				</div>
 		</div>
