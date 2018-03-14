@@ -6,12 +6,14 @@ const calc = () => {
   num1 = parseFloat(num1);
   num2 = parseFloat(num2);
 
-  if(num1 === '' || num1 === null || isNaN(num1)){
+  const isValid = (num) => num === '' || num === null || isNaN(num)
+
+  if(isValid(num1)) {
     alert('favor digitar um número válido');
     return false;
   }
 
-  if(num2 == '' || num2 == null || isNaN(num2)){
+  if(isValid(num2)) {
     alert('favor digitar um número válido');
     return false;
   }
@@ -30,7 +32,7 @@ const calc = () => {
       break;
 
     case '4':
-      result = num1 / num2;
+      result = num1 / (num2 || 1);
       break;
 
     default: alert('Escolha uma opção');
